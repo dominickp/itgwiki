@@ -1,0 +1,28 @@
+<!--
+title: Note Types
+description: 
+published: 1
+date: 2022-12-28T20:08:04.191Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-28T20:08:04.191Z
+-->
+
+<p>ITG has several types of <strong>notes</strong> that may be used in simfiles. The various note types require different actions by the player to ensure successful <a href="https://itgwiki.dominick.cc/en/software/stepmania-judgements">Judgments</a> in play. Certain note types may require the player to maintain a held position, or will penalize the player if they not avoided.</p>
+<p><i>Note: Many </i><a href="https://itgwiki.dominick.cc/en/software/stepmania-noteskins"><i>noteskins</i></a><i> may alter how certain note types are rendered, or apply unique cosmetic changes. For the sake of clarity, this document is written assuming the player is using a "standard" noteskin, such as Metal or Cel, or a variant noteskin that closely mimics them.</i></p>
+<h2><strong>Tap</strong></h2>
+<p><strong>Tap</strong> notes are the most common type of note. They appear as a basic arrow designating the panel the player is intended to step on, with the coloration and other details determined by both the timing of the note and the noteskin in use. Tap notes must be pressed when the arrow marker overlaps the receptors at the top of the playing field, with more accurate presses awarding the player a better <a href="https://itg.wiki/wiki/Judgments">judgment</a>. Denoted as "1" in the .sm/.ssc file.</p>
+<h2><strong>Hold</strong></h2>
+<p>A <strong>hold</strong> note appears as a Tap note with a long "tail" attached to the bottom. Hold "tails" typically appear silver or green - some noteskins may further alter the color or appearance of the tail. A hold note must be pressed when the arrow crosses the receptors at the top of the screen and then held down until the end of the tail reaches the receptors. If the hold is released too early, the player will be penalized with a loss of <a href="https://itg.wiki/wiki/Score">score</a> and life bar. Unlike similar note types in other rhythm games, such as Charge Notes from beatMania IIDX, Hold notes do not have to be released at a precise time. Denoted as "2" for the hold head and "3" for the hold end in the .sm/.ssc file.</p>
+<h2><strong>Mine</strong></h2>
+<p>A <strong>mine</strong> appears as a small silver-and-red landmine or bomb. Unlike most note types, Mines must be avoided, rather than pressed. If the panel or button that a mine is attached to is activated when the mine crosses the receptors at the top of the screen, it will explode, and the player will be penalized with a loss of <a href="https://itg.wiki/wiki/Score">score</a> and life bar. Denoted as "M" in the .sm/.ssc file.</p>
+<p>Throughout the lifespan of ITG customs, stepchart writers have often used mines for various purposes other than simply penalizing the player. Many custom charts have used them in ways to provide decorative "flair" in unobtrusive ways, or used them to "mark" certain aspects of a chart, such as <a href="https://itg.wiki/wiki/Technical_/_Fantastic_Attack">technical</a> elements that may require specific executions. Regardless of their "reason" for use, making contact with a mine will still result in a penalty.</p>
+<h2><strong>Roll</strong></h2>
+<p><strong>Rolls</strong> typically appear somewhat similar to a Hold note, but frequently have different coloration and visual indicators (such as "spikes" on the sides) to differentiate them from normal holds. In order to execute a roll correctly, the player must first press the button when the arrow crosses the receptors and then continue to <i>repeatedly</i> press the button until the end of the roll "tail" crosses the receptors. If the button is not pressed again quickly enough, the player will be penalized with a loss of <a href="https://itg.wiki/wiki/Score">score</a> and life bar. Denoted as "4" for the roll head and "3" for the roll end in the .sm/.ssc file.</p>
+<p>The name "roll" stems from the percussion technique "drum roll."</p>
+<h2><strong>Lift</strong></h2>
+<p><strong>Lifts</strong> are a very rare type of note that have not been used with great frequency in "modern" custom content to date, as well as being totally unused in stock ITG and ITG2. They typically appear as a completely gray or silver arrow, or an "X"-shaped symbol. To execute a lift, the player must have the button already pressed and activated <i>before</i> the lift reaches the receptors, then "lift" their foot off of the panel when it crosses the receptor. It is considered the opposite of a normal tap note due to its behavior. Denoted as "L" in the .sm/.ssc file.</p>
+<h2><strong>Fake</strong></h2>
+<p><strong>Fake</strong> notes can appear as any other note type. Fake notes <i>cannot</i> be hit by the player - regardless of the "type" of the fake, they will simply cross by the receptors with no effect. The activation (or lack thereof) of the panel the fakes are on is irrelevant. Fakes do not count towards a player's <a href="https://itg.wiki/wiki/Score">score</a> and have no effect on the life bar.</p>
+<p>Fakes can be designated as individual notes (denoted as "F" in the .ssc file), or as an entire "section" of a chart. In addition, any notes placed in the range of a Warp <a href="https://itg.wiki/wiki/Gimmicks">gimmick</a> will automatically be converted to Fakes so the player can't be penalized by notes that can't be hit.</p>
+<p>Fakes are an SSC-only note type and cannot be used in .sm files.</p>
