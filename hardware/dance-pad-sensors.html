@@ -2,7 +2,7 @@
 title: Pad Sensor Technologies
 description: 
 published: 1
-date: 2022-12-28T18:30:06.109Z
+date: 2022-12-28T18:35:12.572Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T18:30:06.109Z
@@ -18,13 +18,13 @@ dateCreated: 2022-12-28T18:30:06.109Z
   <li><a href="https://itg.wiki/wiki/Dance_pads#DDR_Game">DDRGame</a></li>
 </ul>
 <h2><strong>Penny-modding</strong></h2>
-<figure class="image image-style-align-right image_resized" style="width:33.37%;"><img src="/hardware/example_of_a_penny_modded_ltek.png">
+<figure class="image image_resized image-style-align-right" style="width:33.37%;"><img src="/hardware/example_of_a_penny_modded_ltek.png">
   <figcaption>Example of a penny modded LTEK from <a href="https://www.youtube.com/watch?v=hLlBETbFACA">How to "Penny Mod" an L-TEK Dance Pad (v2.0)</a>.</figcaption>
 </figure>
 <p>Pads with contact sensors are often "penny modded" which means putting pennies on one side of the sensor to make them much more sensitive. Simply placing coins or strips of thin conductive material in between the sensor plates will increase the sensitivity significantly by reducing the travel required for them to make electrical contact.</p>
 <p><a href="https://ddrpad.com/products/l-tek-pad-sensitivity-penny-mod">DDRPad.com sells a kit</a> that provides an alternative to using pennies which uses copper shims that probably damages the contacts less over time.</p>
 <h1>Arcade sensors</h1>
-<figure class="image image-style-align-right image_resized" style="width:38.92%;"><img src="/hardware/itg-piu_arcade_sensor.png">
+<figure class="image image_resized image-style-align-right" style="width:38.92%;"><img src="/hardware/itg-piu_arcade_sensor.png">
   <figcaption>An ITG/PIU arcade sensor.</figcaption>
 </figure>
 <p>Arcade sensors are long rubber contact sensors that have an air bladder in between. Most dance arcade games use some form of these sensors. Because they are only used for dance arcades, they can be quite expensive. Usually people don't retrofit pads with arcade sensors, since they are bit a thick and require a channel to hold them in place and an "L-bracket" to push down on them in the center.</p>
@@ -36,37 +36,37 @@ dateCreated: 2022-12-28T18:30:06.109Z
 </ul>
 <h2><strong>Modding pads with arcade sensors</strong></h2>
 <p>Modding pads with arcade sensors is pretty straightforward. To raise the height of panels, put tape (gorilla/gaffer tape) above the L-bracket. To make them more sensitive, put paper or tape under the L-bracket (or directly on the sensor). You can also read <a href="https://pastebin.com/5gRirFNQ">Arvin's pad modding guide</a>.</p>
-<h3><strong>Arcade sensor connectors[</strong><a href="https://itg.wiki/w/index.php?title=Dance_Pad_Sensor_Technologies&amp;veaction=edit&amp;section=6"><strong>edit</strong></a><strong> | </strong><a href="https://itg.wiki/w/index.php?title=Dance_Pad_Sensor_Technologies&amp;action=edit&amp;section=6"><strong>edit source</strong></a><strong>]</strong></h3>
+<h3><strong>Arcade sensor connectors</strong></h3>
 <p>For some projects, you may want to use the original connector for arcade sensors. DDR sensors use a <a href="https://www.jst-mfg.com/product/pdf/eng/eYL.pdf">JST YLR-02V</a> connector while ITG/PIU sensors use <a href="https://www.molex.com/molex/products/part-detail/crimp_housings/0039012025">Molex 0039012025</a> connectors.</p>
-<h2>Force-sensing resistor (FSR)[<a href="https://itg.wiki/w/index.php?title=Dance_Pad_Sensor_Technologies&amp;veaction=edit&amp;section=7">edit</a> | <a href="https://itg.wiki/w/index.php?title=Dance_Pad_Sensor_Technologies&amp;action=edit&amp;section=7">edit source</a>]</h2>
-<figure class="image image-style-align-right image_resized" style="width:29.83%;"><img src="/hardware/a_group_of_fsrs.png">
+<h1>Force-sensing resistor (FSR)</h1>
+<figure class="image image_resized image-style-align-right" style="width:29.83%;"><img src="/hardware/a_group_of_fsrs.png">
   <figcaption>A group of FSRs</figcaption>
 </figure>
 <p>Force-sensing resistors (also known as "force-sensitive resistor" and "FSRs") are a type of sensor that changes its resistance when force or pressure is applied to it. FSRs have recently become much more popular with ITG players because its relatively easy to implement a circuit with FSRs and their extremely slim design makes them easy to retrofit into many types of <a href="https://itg.wiki/wiki/Dance_pads">dance pads</a>.</p>
 <p>&nbsp;</p>
-<p><strong>Wiring guides</strong></p>
-<figure class="image image_resized" style="width:155px;"><img src="https://static.miraheze.org/itgwiki/thumb/b/b2/Sujeet%27s_wiring_diagram.png/80px-Sujeet%27s_wiring_diagram.png" alt="" srcset="//static.miraheze.org/itgwiki/thumb/b/b2/Sujeet%27s_wiring_diagram.png/120px-Sujeet%27s_wiring_diagram.png 1.5x, //static.miraheze.org/itgwiki/thumb/b/b2/Sujeet%27s_wiring_diagram.png/160px-Sujeet%27s_wiring_diagram.png 2x" sizes="100vw" width="80"></figure>
-<p>&nbsp;</p>
-<p>Sujeet's wiring diagram for a Teensy 4.0. Sensor wires go where the colored boxes are.</p>
-<figure class="image image_resized" style="width:155px;"><img src="https://static.miraheze.org/itgwiki/thumb/7/7f/JNero%27s_wiring_guide..png/120px-JNero%27s_wiring_guide..png" alt="" srcset="//static.miraheze.org/itgwiki/thumb/7/7f/JNero%27s_wiring_guide..png/180px-JNero%27s_wiring_guide..png 1.5x, //static.miraheze.org/itgwiki/thumb/7/7f/JNero%27s_wiring_guide..png/240px-JNero%27s_wiring_guide..png 2x" sizes="100vw" width="120"></figure>
-<p>&nbsp;</p>
-<p>JNero's wiring guide.</p>
-<figure class="image image_resized" style="width:155px;"><img src="https://static.miraheze.org/itgwiki/thumb/b/ba/Bandit%27s_wiring_diagram..png/120px-Bandit%27s_wiring_diagram..png" alt="" srcset="//static.miraheze.org/itgwiki/thumb/b/ba/Bandit%27s_wiring_diagram..png/180px-Bandit%27s_wiring_diagram..png 1.5x, //static.miraheze.org/itgwiki/thumb/b/ba/Bandit%27s_wiring_diagram..png/240px-Bandit%27s_wiring_diagram..png 2x" sizes="100vw" width="120"></figure>
-<p>&nbsp;</p>
-<p>Bandit's wiring guide.</p>
-<figure class="image image_resized" style="width:155px;"><img src="https://static.miraheze.org/itgwiki/thumb/5/56/Arduino_FSR_wiring_diagram.png/106px-Arduino_FSR_wiring_diagram.png" alt="" srcset="//static.miraheze.org/itgwiki/thumb/5/56/Arduino_FSR_wiring_diagram.png/158px-Arduino_FSR_wiring_diagram.png 1.5x, //static.miraheze.org/itgwiki/thumb/5/56/Arduino_FSR_wiring_diagram.png/211px-Arduino_FSR_wiring_diagram.png 2x" sizes="100vw" width="106"></figure>
-<p>&nbsp;</p>
-<p>Arduino wiring diagram.</p>
-<figure class="image image_resized" style="width:155px;"><img src="https://static.miraheze.org/itgwiki/thumb/3/33/Fsr_padwiring_schematic.png/102px-Fsr_padwiring_schematic.png" alt="" srcset="//static.miraheze.org/itgwiki/thumb/3/33/Fsr_padwiring_schematic.png/153px-Fsr_padwiring_schematic.png 1.5x, //static.miraheze.org/itgwiki/thumb/3/33/Fsr_padwiring_schematic.png/204px-Fsr_padwiring_schematic.png 2x" sizes="100vw" width="102"></figure>
-<p>&nbsp;</p>
-<p>Electrical wiring schematic.</p>
+<h2><strong>Wiring guides</strong></h2>
+<figure class="image image_resized" style="width:14.09%;"><img src="/hardware/fsr-wiring/sujeets_wiring_diagram.png">
+  <figcaption>Sujeet's wiring diagram for a Teensy 4.0. Sensor wires go where the colored boxes are.</figcaption>
+</figure>
+<figure class="image image_resized" style="width:23.97%;"><img src="/hardware/fsr-wiring/jnero_wiring_guide.png">
+  <figcaption>JNero's wiring guide.</figcaption>
+</figure>
+<figure class="image image_resized" style="width:21.75%;"><img src="/hardware/fsr-wiring/bandits_wiring_diagram.png">
+  <figcaption>Bandit's wiring guide.</figcaption>
+</figure>
+<figure class="image image_resized" style="width:20%;"><img src="/hardware/fsr-wiring/arduino_fsr_wiring_diagram.png">
+  <figcaption>Arduino wiring diagram.</figcaption>
+</figure>
+<figure class="image image_resized" style="width:20.34%;"><img src="/hardware/fsr-wiring/fsr_padwiring_schematic.png">
+  <figcaption>Electrical wiring schematic.</figcaption>
+</figure>
 <p>Note for those with Teensy 4.0: some of these wiring guides say to use 5V on the Teensy. According to the Teensy 4.0 specifications, you should use 3V, not 5V. But many people do use 5V so YMMV.</p>
 <p>Notable pads that used FSRs:</p>
 <ul>
   <li><a href="https://itg.wiki/wiki/Dance_pads#StepManiaX_Stage">StepManiaX Generations 4+</a></li>
   <li>Most <a href="https://itg.wiki/wiki/Dance_pads#Travel_pads">travel pads</a></li>
 </ul>
-<h3><strong>Velostat</strong></h3>
+<h2><strong>Velostat</strong></h2>
 <p>Velostat is a type of FSR made by 3M that comes in sheets that can be cut to size. Some of the first FSR pads used Velostat but most in the scene now prefer standard FSR modules to Velostat for consistency reasons.</p>
 <h3><strong>See also</strong></h3>
 <ul>
@@ -76,8 +76,8 @@ dateCreated: 2022-12-28T18:30:06.109Z
   <li><a href="https://github.com/vlnguyen/itg-fsr">Vincent's FSR Pad Guide</a></li>
   <li><a href="https://buyinterlinkelectronics.com/">Interlink Electronic's FSR Store</a></li>
 </ul>
-<h2>Load cells</h2>
-<figure class="image image-style-align-right image_resized" style="width:26.21%;"><img src="/hardware/a_load_cell.jpg"></figure>
+<h1>Load cells</h1>
+<figure class="image image_resized image-style-align-right" style="width:26.21%;"><img src="/hardware/a_load_cell.jpg"></figure>
 <p>Load cells are thicker than FSRs and people believe they are less susceptible to drift over time. Because they are thicker, they are a bit more difficult to retrofit into pads compared to FSRs. Additionally, the electronics required to drive them are more complicated than FSRs, so they aren't as DIY-friendly.</p>
 <p>Notable pads that used load cells:</p>
 <ul>
