@@ -2,10 +2,32 @@
 title: Moving Away From Miraheze
 description: The last straw
 published: 1
-date: 2022-12-28T16:45:41.345Z
+date: 2022-12-28T16:57:01.225Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T16:45:41.345Z
 -->
 
-<h1>Moving Away From Miraheze</h1>
+<h1>Update on the ITG Wiki</h1>
+<h2>The last straw</h2>
+<p>The ITG Wiki was hosted with <a href="https://miraheze.org/">Miraheze,</a> a free MediaWiki hosting provider. I originally chose them because I've hosted other knowledgebases in the past that eventually became defunct (e.g. RhythmArcade). I wanted a hosting solution that was more durable that I could provide. Something out of my hands so if something went wrong, it would still live on.</p>
+<p>Miraheze was very slow, but it was free and mostly worked so I couldn't complain. But after a few months of ITG Wiki running, they had an incident with one of their servers. Hundreds of wikis (including ITG Wiki) were offline for weeks as they tried to fix their corrupted database. Eventually, Miraheze gave wiki owners a choice:</p>
+<ul>
+  <li>Wait a longer undetermined time for the data from their server to <i>maybe</i> be restored OR</li>
+  <li>Recreate the wiki from scratch</li>
+</ul>
+<p>Since the wiki was down for weeks, I decided to just recreate from scratch so we could get <i>something</i> back and usable. I spent a few hours scraping Google, Bing, Yandex, and the WayBackMachine for all of the pages and recreated them by hand. At this point, the wiki was running again.</p>
+<p>About 2 weeks later, the wiki again went offline. Miraheze had recovered their data and took all of the previous wikis offline for another week or so while they coordinate restoring the backups. This was pretty annoying because our wiki was again offline this entire time and I had already restored everything by hand.</p>
+<p>Miraheze is a dumpster fire. We have no control over the wiki and the downtime is unusable to the point that I decided to actually host it myself.</p>
+<h2>Why the ITG Looks Different</h2>
+<p>I spent a little bit of time evaluating different wiki options, since I was never much of a fan of MediaWiki. I looked at Outline, Bookstack, and Wiki.js. I ended up going with Wiki.js since it is very easy to host and has some useful integrations.</p>
+<p>What's new:</p>
+<ul>
+  <li>You now log into ITG Wiki via Discord</li>
+  <li>Pages now load in a reasonable amount of time</li>
+</ul>
+<h2>How will I prevent losing data in the future?</h2>
+<ol>
+  <li>I am making daily backups of the wiki and archiving them locally</li>
+  <li>I created <a href="https://github.com/dominickp/itgwiki">a github repo where the entirety of ITG Wiki is synced to</a>, every 5 minutes</li>
+</ol>
