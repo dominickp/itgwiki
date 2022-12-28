@@ -1,0 +1,158 @@
+<!--
+title: Score
+description: 
+published: 1
+date: 2022-12-28T20:03:33.263Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-28T20:03:33.263Z
+-->
+
+<p><strong>Score</strong> is a general measurement of how well a player performed on a given chart. In ITG, a player's score is expressed as a percentage with 2 decimal places, from 0.00%-100.00%.</p>
+<p>Score is displayed at the top of the screen while in-game and on the results screen after a song. Score is awarded to the player with each successful step they make, with the worth of each step being calculated based on the total number of steps in the song and the accuracy of the step's <a href="https://itgwiki.dominick.cc/en/software/stepmania-judgements">Judgments</a>. Better accuracy on a step is rewarded with greater score, with the maximum possible value for a step being rewarded for the most accurate step timing. In addition, there are some events that will penalize players with a score reduction, such as missing steps, releasing Hold notes too early, or making contact with a Mine.</p>
+<p>Most ITG themes also evaluate the player's score with a <strong>grade</strong> on the song results screen, depending on the theme in use and the score thresholds for given grades. If song failure is enabled in the theme options, players will receive a failing grade ("F" in standard scoring systems) on the results screen, regardless of the score the player had at the time of failure.</p>
+<p>Players may submit song scores to Groovestats following song completion if the song is ranked in the Groovestats database.</p>
+<h1>Grades</h1>
+<p>The table below shows the grade thresholds in "stock" ITG. Many modern themes use these grade thresholds as well, but some, such as <a href="https://itgwiki.dominick.cc/en/software/stepmania-themes#waterfall">Waterfall</a>, have unique grading systems.<br>&nbsp;</p>
+<figure class="table">
+  <table style="background-color:rgb(248, 249, 250);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);">
+    <tbody>
+      <tr>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Grade</th>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Minimum score</th>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Notes</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">****</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">100.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Known as a quad</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">***</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">99.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Known as a tristar</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">**</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">98.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">*</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">96.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">S+</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">94.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">S</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">92.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">S-</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">89.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">A+</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">86.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">A</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">83.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">A-</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">80.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">B+</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">76.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">B</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">72.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">B-</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">68.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">C+</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">64.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">C</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">60.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">C-</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">55.00%</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">D</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Below 55.00%</th>
+        <th>&nbsp;</th>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Score Calculation</h1>
+<p>In order to calculate a player's score, the result of each step is given a point value, based on the steps' <a href="https://itgwiki.dominick.cc/en/software/stepmania-judgements">Judgments</a>. These values are sometimes referred to as "score weights" or "dance points." These point values are added up and compared (as a percentage) to the maximum number of points possible for the chart being played.</p>
+<p>The table below shows the default point values for each step judgment in stock ITG. These are sometimes referred to as "stock weights."<br>&nbsp;</p>
+<figure class="table">
+  <table style="background-color:rgb(248, 249, 250);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);">
+    <tbody>
+      <tr>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Judgment</th>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Points</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Fantastic</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">5</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Excellent</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">4</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Great</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">2</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Decent</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">0</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Way Off</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">-6</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Miss</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">-12</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Completed Hold/Roll</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">5</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Mine Hit</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">-6</th>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Frequently, ITG tournaments and events may choose to use alternative point values for given steps, for the purpose of emphasizing a particular skillset, or adjusting how much a player is penalized for missing steps or hitting mines.</p>
