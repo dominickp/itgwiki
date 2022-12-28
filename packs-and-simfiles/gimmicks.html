@@ -2,7 +2,7 @@
 title: Gimmicks
 description: 
 published: 1
-date: 2022-12-28T19:29:24.369Z
+date: 2022-12-28T19:31:53.365Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T19:22:56.691Z
@@ -93,10 +93,44 @@ dateCreated: 2022-12-28T19:22:56.691Z
 </figure>
 <p>StepMania's engine keeps track of chart position by calculating the total effect of offset, BPM changes, and stops. As a chart is played, StepMania knows the time when each beat should reach the targets. However, this "beat mapping" does not screen for negative BPM changes or stops; the engine gives them no special treatment when performing calculations, and chart writers in the mid-2000's put that knowledge to use using an "aliasing" technique. By pairing a negative BPM change or stop with an equal and opposite BPM change or stop, they could rewind the engine's internal clock and then let it catch back up, placing a beat much further along the chart at the same time as the start of the gimmick and effectively skipping the section between this "aliased" pair of beats.</p>
 <p>For example, if a chart writer sets the BPM at beat 4 to <strong>-120 BPM</strong>, then beat 8 to <strong>(positive) 120 BPM</strong>, the measure between beats 8 and 12 will be canceled out by the rewinding of the internal clock from beats 4 to 8, and the chart instantly jumps from beat 4 to beat 12 in gameplay, skipping or "warping" through two measures.</p>
-<figure class="image image_resized" style="width:19.3%;"><img src="/charting/gimmicks/negative_microstops_in_butterfly_(couples).png">
+<figure class="image image_resized" style="width:26.73%;"><img src="/charting/gimmicks/negative_microstops_in_butterfly_(couples).png">
   <figcaption>Negative microstops in Spooty's couples chart to Butterfly (Couples Boot Camp 3) counteract the 192nd note offset between players.</figcaption>
 </figure>
 <p>If there are notes in the warped section, they are unhittable unless they fall within a judgment window of either end of the warp. Chart writers looking to create a sudden replacement effect often use mines, holds, or arrows that "echo" the eventual true notes at the warp endpoint, but without ample padding, the player could accidentally trigger these "unhittable" mines or encounter single-ended judgment windows for these "fake" notes.</p>
 <p>With the rise of SSC gimmicks, negative-value warps have mostly disappeared in favor of explicit warp support. One major exception is the couples chart scene, where rhythmic coloring is used to distinguish between players, so tiny negative-stop warps are used to alias the two players' notes back together. For example, a quarter note and a 192nd note at 125 BPM are a disorienting <strong>10ms</strong> apart, so a <strong>-0.010 second</strong> stop on the downbeat will allow the players to step in sync with each other, and a (positive) <strong>0.010 second</strong> stop on the 192nd note will cancel out the introduced offset and keep the song on sync.</p>
 <h4><strong>Verifying the result</strong></h4>
 <p>Whenever BPM changes and stops are added to a song, there is a risk of moving beats earlier or later in time than they should occur, causing the chart to "go off-sync" or "drift". Chart writers often double-check their work by marking a later beat and noting down StepMania or ArrowVortex's time calculation before applying the gimmicks, then making sure the result still matches.</p>
+<h3><strong>.ssc Compatible</strong></h3>
+<h4><strong>BPM change compensation</strong></h4>
+<figure class="image image_resized image-style-align-right" style="width:24.76%;"><img src="/charting/gimmicks/compensating_for_bpm_changes_in_shum_(upsmh_online).png">
+  <figcaption>At each BPM change (red) in SHUM, a scroll rate (teal) is applied so that the product of the two values is 154, the highest BPM the song reaches.</figcaption>
+</figure>
+<p>The use of scroll rates to compensate for natural changes in BPM (such as gradual slowdowns or live recordings), coupled with an appropriate #DISPLAYBPM setting, is very popular: the chart writer no longer has to recommend Cmod for the whole chart, nor task the player with remembering to switch it on. For example, if a chart changes from <strong>120 BPM</strong> to <strong>150 BPM</strong>, the chart writer can set #DISPLAYBPM to <strong>150</strong>, then place a (<strong>150</strong>/<strong>120</strong>) = <strong>1.25</strong> scroll rate where the 120 BPM section starts, and a 1.0 scroll rate where the 150 BPM section starts. One example of this is Telperion's SHUM from UPSMH Online, which accounts for a gradual BPM change over most of the song, while leaving the ramp in the central climax intact.</p>
+<h4><strong>Gentler reading speed changes</strong></h4>
+<p>With only BPM changes at one's disposal, cosmetic slowdowns and speedups are usually restricted to whole-number divisors and multipliers (one notable counterexample being DDR SuperNOVA's INNOCENCE OF SILENCE, which incorporates a 3/4× multiplier). However, scroll rates and speed segments offer some more polite approaches:</p>
+<ul>
+  <li>A 0.5× speed segment, scheduled to end right before the BPM of a chart doubles, can make the transition to the new section much smoother for the player. One example of this is the ending of sudzi's Step It from Club Fantastic Season 2.</li>
+  <li>Instead of inserting a 0.5× BPM change to create a slowdown, a 0.5× scroll speed can be used with the original BPM. This also has the advantage of preserving the rhythm coloring of the arrows. Using a scroll speed also frees the chart writer from strictly halving the rate of approach: some chart writers prefer to use 0.6× or 0.7×, which still communicate the change effectively while making the section less cumbersome to read.</li>
+</ul>
+<h4><strong>Stutter gimmicks and ramp gimmicks</strong></h4>
+<p>Since SSC scroll rate mechanics are entirely visual, they free the chart writer from having to account for sync in stutter gimmicks as well.</p>
+<h5>Sharp stutters</h5>
+<p>The stop in "sharp" stutters can be replaced with a 0× scroll rate at the beginning of the gimmick. Another scroll rate should be placed mid-gimmick to make sure the spacing of the notes remains consistent.</p>
+<ul>
+  <li>For example, if the chart writer wants to add a sharp <strong>16th</strong> stutter, they might place a <strong>0×</strong> scroll rate at the beginning, then a <strong>1.5×</strong> scroll rate one <strong>48th</strong> note afterward, then reset the scroll rate to 1× at the end of the gimmick. The split into (<strong>0×</strong>)(<strong>1/48</strong>) + (<strong>1.5×</strong>)(<strong>2/48</strong>) results in the same <strong>1/16</strong> of chart coverage.</li>
+</ul>
+<h5>Soft stutters</h5>
+<p>The scroll rate arithmetic also drops the need for reciprocals: simply multiplying the portion of the gimmick by the scroll rate applied accounts for its contribution.</p>
+<ul>
+  <li>For example, one popular soft stutter recipe is <strong>1.5×</strong> scroll rate at the beginning of the gimmick, <strong>0.5×</strong> midway through, then 1× at the end to reset. Since (<strong>1.5×</strong>)(1/2) + (<strong>0.5×</strong>)(1/2) = 1, the spacing of the arrows at the ends of the gimmick is preserved.</li>
+</ul>
+<h5>Ramps</h5>
+<p>Scroll rate arithmetic is flexible and simple enough to easily extrapolate to more than two changes.</p>
+<ul>
+  <li>For example, a smooth ramp from a "stop" (0× scroll rate) back to original speed (1× scroll rate) can be accomplished by dividing the transition into four equal intervals and using a sequence of <strong>0.2×, 0.4×, 0.6×, 0.8×</strong>. Because (<strong>0.2 + 0.4 + 0.6 + 0.8</strong>) / 4 = <strong>0.5</strong>, this ramp appears to cover <strong>half</strong> the length of the original phrase.</li>
+</ul>
+<h4><strong>Rubber-banding</strong></h4>
+<p>One particularly emphatic use of SSC mechanics is the "rubber-band" effect, where a scroll rate and a speed segment are applied at the same time, with multipliers that cancel once the speed segment is fully active.</p>
+<ul>
+  <li>For example, to feel the impact of the final cymbal crash in a song, the chart writer could apply a <strong>0.5×</strong> scroll rate and a <strong>2.0</strong>/<strong>4.0/B</strong> speed segment <strong>four beats</strong> before the matching arrow. The linear dilation of the speed segment compounds with the linear movement of the arrows to create a quadratic ease, making the crash note appear motionless at first, then accelerating (rubber-band snapping) toward the targets. However, the actual reading speed of the chart won't exceed (<strong>0.5×</strong>)(<strong>2.0×</strong>) = 1, so the player has all the reaction time they normally would.</li>
+</ul>
