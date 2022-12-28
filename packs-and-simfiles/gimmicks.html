@@ -1,0 +1,85 @@
+<!--
+title: Gimmicks
+description: 
+published: 1
+date: 2022-12-28T19:22:56.691Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-28T19:22:56.691Z
+-->
+
+<p>Gimmicks, also known as "scroll variations" in other VSRG communities, are the use of StepMania mechanics to influence the speed of arrows as they travel toward the targets. Gimmicks are often used to draw attention to some feature of the music, or to make the chart more challenging to read.</p>
+<h2>Common types of gimmicks</h2>
+<h3><strong>StepMania 3.95+ / .sm</strong></h3>
+<h4><strong>BPM changes</strong></h4>
+<p>Most pieces of music have a consistent spacing between downbeats, measured in BPM (beats per minute). StepMania allows the chart writer may choose to set the BPM of the chart (or a section of the chart) to a different value - in the context of gimmicks, this is often used for cosmetic effect.</p>
+<h4><strong>Stops</strong></h4>
+<p>StepMania also allows the chart writer to insert a "stop", which halts chart scrolling for the given number of seconds without pausing the music.<br>Because StepMania 3.95 only supports time-based stops with millisecond precision, large numbers of stops can introduce a drift in the song sync due to compounded rounding error. For example, a 16th note at 131 BPM rounds up to 115 milliseconds, but if a chart editor naively places a hundred 0.115-second stops, the sync will drift by almost 50 milliseconds over the course of the song!</p>
+<h4><strong>Negative-value gimmicks (warps)</strong></h4>
+<p>Before warps were introduced, chart writers exploited a quirk of the StepMania 3.9 engine, using stops or BPM changes with negative values to fast-forward or "warp" the chart. Tap notes and mines that occurred during a warp generally couldn't be hit by the player, but also wouldn't have any effect on the lifebar. It was impossible to achieve 100% on charts with arrows during negative gimmicks, since StepMania 3.9 didn't distinguish between chart elements inside and outside of a warp section.</p>
+<h3><strong>StepMania 5+ / .ssc</strong></h3>
+<p>The SSC format introduced a few additional tools that could create new kinds of visual effects.<br>In StepMania 5's edit mode, most of these tools are accessible through one or more of the following menus:</p>
+<ul>
+  <li><code>F4</code> (Timing)</li>
+  <li><code>A</code> (Alter)</li>
+  <li><code>Enter</code></li>
+  <li><code>Esc</code></li>
+</ul>
+<p>In ArrowVortex, there is an "Adjust tempo SM5" panel that can be opened.</p>
+<h4><strong>Split timing</strong></h4>
+<p>The SSC format allows different charts in the same file to have separate mappings of beats to music time. Chart writers can place gimmicks in just one difficulty slot and leave the others free, or express unique ideas in each chart. Split timing is often used to gradually simplify the visual complexity in the easier difficulties, making the simfile more approachable for new players. In StepMania 5's editor, pressing <code>T</code> switches between song timing (which applies to all charts) and split timing, and split timing can be removed from the <code>Esc</code> menu.</p>
+<p>The same SSC mechanic that allows for split timing also extends to a separate music file for each chart; however, the StepMania logic that calculates the length of the song only checks the base file's audio. Examples of per-chart music include mdx's Treaty of Peace between Glitchhop and Moombahcore (global namespace 2) and Telperion's crew (U.P.S. 3).</p>
+<p>Once split timing is present in a SSC file, it loses compatibility with the SM format, and editor programs won't attempt to save an "unsplit" version of the simfile.</p>
+<h4><strong>Scroll rates</strong></h4>
+<p>Scroll rates act as a plain multiplier on the current scrolling speed of the arrows. For example, a 120 BPM song with a 1.25 scroll rate applied moves as fast as a 150 BPM song. Subsequent scroll rates override the previous ones, instead of compounding.<br>This value can also be set to 0, which provides an alternative to the time-based stop found in the .sm format; however, unlike time-based stops, the chart doesn't actually halt. The targets will still blink on beat, and the player is expected to respond to any notes that occur during a 0× scroll rate.<br>Negative scroll rates are also accepted by StepMania; the visual spacing is the same as the corresponding positive scroll rate, but the notes scroll in the opposite direction.</p>
+<h4><strong>Speed segments</strong></h4>
+<p>Speed segments also act as a plain multiplier on the current scrolling speed, but they take effect gradually over the chosen number of beats or seconds. For example, applying a "<strong>1.25/8.0/B</strong>" segment in a 120 BPM chart will linearly increase the speed of the arrows over <strong>8.0 B</strong>eats until it moves as fast as a (120 <strong>× 1.25</strong> =) 150 BPM song. If another speed segment follows, it will start from the multiplier reached by the previous one, and gradually transition to the new specified multiplier (instead of compounding).<br>Speed segments and scroll rates provide independent multipliers and can be compounded together. For example, at the end of a <strong>2.0</strong>/4.0/B speed segment with a <strong>0.5</strong> scroll rate active, the chart will appear to be scrolling as if no effects were applied.</p>
+<h4><strong>Warps</strong></h4>
+<p>The SSC format also introduced built-in warps that have a more intuitive behavior than the negative-value hack of older versions. The chart writer can directly specify the number of beats to warp over, and notes during that section will not be hittable or counted at all (they become "fakes").</p>
+<p>When editing a simfile, StepMania 5 will make all possible efforts to convert negative-value gimmicks to explicit SSC-format warps. If the .sm file is still present, and split timing hasn't been introduced, StepMania 5 will also save any SSC-format warps as negative stops in the .sm file.</p>
+<h4><strong>Fake segments</strong></h4>
+<p>Fake segments have no effect except to turn all notes within them into fakes - they will scroll by the receptors and cannot be hit, but they don't detract from lifebar or score. (Individual fake notes can also be inserted outside of fake segments.)</p>
+<h4><strong>Delays</strong></h4>
+<p>Delays have identical behavior to stops, except that notes on the exact beat of a stop will fire when they arrive, but notes on a delay will fire after the delay time has passed.</p>
+<h2>History</h2>
+<h3><strong>Before In the Groove (1998-2004)</strong></h3>
+<p>Isolated stops and instances of halving/doubling BPM gradually manifested in early DDR, culminating in charts like the MAX series (MAX 300, MAXX UNLIMITED, The legend of MAXX) and the PARANOiA series (Survivor and Survivor MAX). As DDR releases marched on, charts like these were created from the ground up with the goal of challenging the growing skill of high-level players, and the tracks themselves distance themselves from the typical genres of "dance music" to provide more hooks and anchors for novel rhythms, as well as new ways to visually destabilize the player. For example, MAX 300's gradual slowdown to a stop still trips up unfamiliar players, and PARANOiA Survivor draws on an eight-measure-long half-BPM motif to create its own identity.</p>
+<h3><strong>In the Groove &amp; DDR SuperNOVA (2004-2006)</strong></h3>
+<p>The extra stage songs released in DanceDanceRevolution SuperNOVA marked a departure from the regularly-spaced gimmicks of charts like PARANOiA Survivor and the large-scale features of MAX 300, 桜, and others. Fascination MAXX, Fascination ~eternal love mix~, and CHAOS featured a large quantity and variety of BPM changes and stops, testing the memorization skills of high-level players. In the short-lived official In the Groove series, notable examples include:</p>
+<ul>
+  <li>Robotix's gradual speedup to 1337 BPM, while the actual step rhythm maintained a constant 150 BPM</li>
+  <li>Euphoria's half-BPM middle portion, visually compressing already-difficult 32nd note drills into 64ths</li>
+  <li>VerTex and VerTex², which interleaved lots of BPM changes and stops in a style resembling DDR boss songs at the time</li>
+</ul>
+<h3><strong>In the Groove: Rebirth, Advent of r21freak, DDR SuperNOVA 2 - DDR X2 (2007-2009)</strong></h3>
+<p>After the In the Groove series was officially halted, the fan project In the Groove: Rebirth attempted to pick up the reins of 4-panel content, releasing a pack of over 80 songs with an aesthetic based on official In the Groove content. The Rebirth pack includes Sonic Vision, which features two negative BPM warps that instantly fast-forward the chart, "replacing" mines with real arrows.<br>The r21freak forum (named after the In the Groove r21 patch that allowed custom songs to be loaded and played from a player's thumbdrive) also came into existence around this time, and the staff released a series of r21freak Site Packs with a dozen or so simfiles each. The first r21freak simfile pack, "r2112", included two Modeselektor songs stepped by sssmsm - Dancingbox and Silikon (feat. Sasha Pereira) - which gained notoriety for the unprecedented quantity of gimmicks built onto their glitchy techno and vocal patterns. One popular effect came to be known as the "stutter" gimmick, which used a short stop to soak up half of a rhythmic unit and create a stuttering motion.<br>Meanwhile, the DDR series intensified their approach, packing even more BPM changes and stops into charts like Pluto, Trigger, and PARANOiA ~HADES~.</p>
+<h3><strong>Color-correct gimmicks and "zimcore" (2010-2015)</strong></h3>
+<p>Until about 2010, both official DDR and the 4-panel customs gimmick scene used simple operations to lay out gimmicks, halving or doubling the BPM as necessary. Unfortunately, this approach disturbs the rhythm coloring of the arrows - making downbeats appear as if they were offbeats, swing notes, or triplets, making it hard for a player to deduce on the first few attempts what the true rhythm might be.<br>In the early 2010s, zimlord, another r21freak staff member, began to release files that had unique gimmick recipes, including stutter gimmicks that didn't compress the number of beats covered in the chart. These stutter gimmicks also came in multiple flavors - "sharp", using a stop and resembling the jerky motion found in Dancingbox, and "soft", which used a pair of BPM changes tuned to cover the same rhythmic unit. By controlling the proportion of the BPM changes and any stops, zimlord was able to preserve rhythm coloring and lighten how much chart knowledge the player would have to commit to memory.<br>The rise of dubstep and brostep around this time offered a friendly substrate for soft stutter "wubs", and this approach became very popular.</p>
+<h3><strong>Adoption of StepMania 5 (2016-present)</strong></h3>
+<p>Once it became easy to install <a href="https://itg.wiki/wiki/StepMania_Forks#StepMania_5_(5.1b2)">StepMania 5</a> on cabs and personal setups, players had a way to experience the wide range of visual effects possible with direct commands in the SSC format, and chart writers were more motivated to experiment with them.<br>The first wave of SSC gimmicks were heavily inspired by charts in Pump It Up, which had outpaced DDR with engine extensions that supported a variety of effects. Generally, simfiles using such gimmicks were relegated to experimental packs or unconventional tournaments. The U.P.S. and S.M.H. tournament series, where each participant could choose a handful of charts for pack inclusion, received lots of gimmick-laden files that players hoped would give them the advantage. Reception at first was lukewarm from seasoned players, who spent some time getting used to the unfamiliar techniques, but fresher faces responded with more enthusiasm and petitioned for the inclusion of U.P.S. and S.M.H. charts in mainstream tournaments, carving out a place in the "meta" for these new gimmicks.<br>Anyway, I think it'd be cool if a couple people that appeared on the scene around this time contributed a blurb or two about Cool Effects™ that had an impact on <i>them</i> in their relative ITG youth.</p>
+<h3><strong>Modern reception</strong></h3>
+<p>The prevailing attitudes of ITG players on the use of gimmicks vary mostly by community. In the stamina/footspeed community, the focus is primarily on pushing physical boundaries, and complicating the mental aspect of the game is generally viewed as counterproductive, although there are some examples of "stamina mods" content (such as Zaia's I'm For You) that can also involve gimmicks. Reception in the technical/timing attack community is mixed, depending on whether individual players feel that the challenge posed by visual disruptions represents a "technique" to master or not, but many players keep a handful of gimmick charts around for casual enjoyment or tournament picks. The use of Cmod to enforce a constant scroll speed is widespread in both communities. The mods community seeks out simfiles that are strongly visually enhanced and often welcomes the use of gimmicks, seeing them as part of the experience when they are present.</p>
+<p>Although the playfield generally doesn't cover a large enough viewing area or fluctuate enough to fall into <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders">photosensitive epilepsy standards for digital video</a>, there are individuals in the community that have reported vestigial symptoms on files with flashing or flickering effects, so caution should be taken to limit the strength and frequency of such effects.</p>
+<h2>Common gimmick recipes</h2>
+<h3><strong>.sm Compatible</strong></h3>
+<h4><strong>Stutter gimmicks</strong></h4>
+<p>Stutter gimmicks get their name from the choppy motion the notes undergo. In the .sm format, there are two main varieties: a tiny stop compensated by a BPM change, creating a "sharp" effect, or a pair of short BPM changes that give a "soft" effect.</p>
+<h5>Sharp stutter</h5>
+<p>A color-correct sharp stutter can be scripted as follows:</p>
+<ol>
+  <li>Determine the time length the gimmick should cover.</li>
+  <li>Place a stop at the beginning of the stutter that lasts for about 1/3 to 1/2 of that time. The more time spent on the stop, the harsher the gimmick will appear.</li>
+  <li>Change the BPM for the duration of the stutter gimmick to cover the remaining time in the original number of beats.</li>
+</ol>
+<p>The chart writer can balance the values by choosing a specific stop length or the BPM and calculating out the other. Consider the following two approaches for <strong>16th note</strong> stutters at <strong>154 BPM</strong>, each lasting <strong>0.0974... seconds</strong>:</p>
+<ul>
+  <li>Example A: The chart writer might choose to increase the BPM to <strong>231</strong>. A <strong>16th note</strong> at <strong>231 BPM</strong> lasts for <strong>0.0649... seconds</strong>, so each stop will need to cover the remaining <strong>0.0325... seconds</strong>. To avoid drifting sync, the chart writer applies <strong>alternating 0.032 and 0.033 second</strong> stops.</li>
+  <li>Example B: The chart writer might choose to soak up <strong>0.030 seconds</strong> with each stop. To keep the song on sync, the chart has to cover the remaining <strong>0.0674...</strong> seconds in the span of each <strong>16th note</strong>, so the chart writer sets a BPM of <strong>222.543</strong>.</li>
+</ul>
+<h5>Soft stutter</h5>
+<p>A color-correct soft stutter uses paired BPMs to achieve a wave-like perturbance. The proportion of the two BPMs to the original depends on the strength of the stutter and how much each is applied for, and the calculation usually involves the reciprocal of these BPM proportions, to make sure the "minutes per beat" remains the same. The soft stutter can have a "rushing" or "dragging" feel, depending on whether the BPMs are applied fast-slow or slow-fast, respectively.</p>
+<ul>
+  <li>One common recipe applies 3/4× and 3/2× the original BPM for equal halves of the gimmick. The 3/4× section takes <strong>4/3</strong> as long to play out, and the 3/2× section takes <strong>2/3</strong> as long: (<strong>4/3</strong>)(1/2) + (<strong>2/3</strong>)(1/2) = 1, meaning the original time interval is the same. For example, soft stutters for a 140 BPM song would alternate between 105 BPM and 210 BPM with this recipe.</li>
+  <li>A much more dramatic recipe uses 2 parts 4× and 1 part 0.4×. Taking the reciprocals of the BPM proportions again, (0.25)(2/3) + (2.5)(1/3) = 1.</li>
+</ul>
+<p>A longer-lasting gimmick might use three or more BPM changes to ease more gradually, but for short stutters two is usually adequate.</p>
