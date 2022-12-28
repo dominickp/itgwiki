@@ -2,7 +2,7 @@
 title: Gimmicks
 description: 
 published: 1
-date: 2022-12-28T19:31:53.365Z
+date: 2022-12-28T19:36:38.054Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T19:22:56.691Z
@@ -134,3 +134,23 @@ dateCreated: 2022-12-28T19:22:56.691Z
 <ul>
   <li>For example, to feel the impact of the final cymbal crash in a song, the chart writer could apply a <strong>0.5×</strong> scroll rate and a <strong>2.0</strong>/<strong>4.0/B</strong> speed segment <strong>four beats</strong> before the matching arrow. The linear dilation of the speed segment compounds with the linear movement of the arrows to create a quadratic ease, making the crash note appear motionless at first, then accelerating (rubber-band snapping) toward the targets. However, the actual reading speed of the chart won't exceed (<strong>0.5×</strong>)(<strong>2.0×</strong>) = 1, so the player has all the reaction time they normally would.</li>
 </ul>
+<h4><strong>Repetition (rewinding)</strong></h4>
+<figure class="image image_resized image-style-align-right" style="width:22.45%;"><img src="/charting/gimmicks/firefox_snapshot.png">
+  <figcaption>A snapshot of ArrowVortex showing the negative scroll rates applied. A -0.5× scroll rate for two 16th notes undoes the distance traveled by the first 16th note and hold.</figcaption>
+</figure>
+<figure class="image image_resized image-style-align-right" style="width:24.1%;"><img src="/charting/gimmicks/searchingplaylist_snapshot.png">
+  <figcaption>A snapshot of ArrowVortex showing the scroll rates applied.</figcaption>
+</figure>
+<p>The behavior of negative scroll rates can be accurately extrapolated: they make the chart move at the same speed as their positive counterparts, but in reverse, causing a "rewinding" effect.</p>
+<ul>
+  <li>This can be applied on a large scale, as presented by charts such as ITGAlex's Searching This Month's Recommended Playlist (dimocracy) or mdx's Auburn Halo (dimocracy).</li>
+  <li>Short sequences of alternating negative and positive scroll rates can be combined, causing notes to overlap with each other and appear to "repeat", as demonstrated in bkirz's Firefox (S.M.H. 4).</li>
+  <li>Alternating but diminishing negative and positive scroll rates can also be used to create a "bounce" effect, as observed in Telperion's Bi-Zon Zon Zombi (dimocracy 2021).</li>
+</ul>
+<p><a href="/charting/gimmicks/rewind_effect_in_itgalexs_searching...playlist_(dimocracy).webm">A scroll rate of 400× immediately followed by a scroll rate of -20× creates a rewind effect in ITGAlex's Searching for This Month's Recommended Playlist (dimocracy).</a></p>
+<p><a href="/charting/gimmicks/repetition_in_bkirzs_firefox_(s.m.h._4).webm">Negative scroll rates in bkirz's Firefox (S.M.H. 4) reel back the chart so that each repetition overlays the previous one.</a></p>
+<h4><strong>Shake</strong></h4>
+<p>Another popular effect in Pump It Up charts is the "shake" effect, where the whole chart's scroll speed is rapidly switched up and down to create a flickering effect. To accomplish this in SSC format, instantaneous speed segments alternating between original speed and slightly less are applied at high frequency (e.g., <strong>1.0/0.0/B</strong> and <strong>0.9/0.0/B</strong>). A notable example of this in 4-panel customs is bkirz's Palpitation chart (Technical Showcase 4).</p>
+<p>Chart writers that implement shake effects should take care to limit the frequency and strength, so as not to trigger <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders">photosensitive epilepsy</a> in susceptible players.</p>
+<h4><strong>Inchworm</strong></h4>
+<p>A popular effect in Pump It Up charts is the "inchworm" effect, where the chart appears to shrink and dilate to the rhythm of the music. This can be accomplished by chaining together speed segments that alternate between <strong>1.0×</strong> and a slightly smaller number such as <strong>0.8×</strong>, usually lasting a beat or <strong>half a beat</strong> apiece (<strong>1.0/0.5/B</strong> and <strong>0.8/0.5/B</strong>).</p>
