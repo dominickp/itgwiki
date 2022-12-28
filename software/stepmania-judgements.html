@@ -1,0 +1,30 @@
+<!--
+title: Judgements
+description: 
+published: 1
+date: 2022-12-28T17:48:21.228Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-12-28T17:48:21.228Z
+-->
+
+<figure class="image image-style-align-right image_resized" style="width:31.59%;"><img src="/software/groovenights_2x7_judgement.png"></figure>
+<p>Judgements show the result of the player's attempt to hit the note. As the player hits the note less accurately, they will receive a worse judgement until finally it is so far off from the correct timing that it registers as a miss. Judgements can be styled and many players have a preference for their favorite judgement.</p>
+<h1>Judgement Types</h1>
+<p>Judgement files are categorized by how many judgements they contain, in column and rows (for example: 2x7 or 1x6). This also needs to be present in the judgement file name for StepMania themes to properly interpret the judgement file. Additionally, higher resolution judgements have to indicate they are "doubleres" in the filename.</p>
+<h2><strong>2x6</strong></h2>
+<p>Judgment files with six rows and two columns, accounting for two error directions (early/late) and five timing windows (Fantastic, Excellent, Great, Decent, Way Off), along with a final row for Miss judgment.</p>
+<h2><strong>2x7</strong></h2>
+<p>Judgment files with seven rows and two columns, accounting for two error directions (early/late) and six timing windows (Fantastic (blue), Fantastic (white), Excellent, Great, Decent, Way Off), along with a final row for Miss judgment.</p>
+<h2><strong>1x6/1x7</strong></h2>
+<p>Judgment files that have only one column, allowing for the same number of timing windows as their 2x6/2x7 counterparts, but without displaying a different graphic for early/late.</p>
+<p>Waterfall exclusively uses 1x7 judgment font sprite sheets, and produces early/late indicators theme-side. Simply Love supports both one-column and two-column sprite sheets, but does not currently have an additional theme-side indicator for early/late timing when using the single-column judgment sheets.</p>
+<h2><strong>FA+</strong></h2>
+<p>StepMania only supports five distinct timing windows, so originally support for the FA+ timing windows was done by repurposing the windows to include a white Fantastic and removing the outermost timing window (Way Off). Judgment graphics used to support this mode were 2x6 or 1x6 sprite sheets consisting of Fantastic (blue), Fantastic (white), Excellent, Great, Decent, and Miss.</p>
+<p>Waterfall and the latest versions of Simply Love can track for the white Fantastic window without eliminating any other timing windows by simulating it theme-side, thus introducing the use of 2x7 and 1x7 spritesheets and essentially obsoleting the previous "FA+ mode".</p>
+<h2>Where to find judgements</h2>
+<ul>
+  <li><a href="https://etternaonline.com/judgements">Etterna Online Judgement Repositoryy</a></li>
+  <li><a href="https://github.com/Pete-Lawrence/Peters-Noteskins/tree/main/SM5/Simply-Love-Assets/_judgments">Peter's Judgements</a></li>
+  <li><a href="https://github.com/Simply-Love/Simply-Love-SM5/tree/release/Graphics/_judgments">Judgements that come packaged with Simply Love</a></li>
+</ul>
