@@ -2,7 +2,7 @@
 title: Pad Sensor Technologies
 description: 
 published: 1
-date: 2022-12-28T18:35:12.572Z
+date: 2023-02-12T16:31:03.273Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T18:30:06.109Z
@@ -39,26 +39,44 @@ dateCreated: 2022-12-28T18:30:06.109Z
 <h3><strong>Arcade sensor connectors</strong></h3>
 <p>For some projects, you may want to use the original connector for arcade sensors. DDR sensors use a <a href="https://www.jst-mfg.com/product/pdf/eng/eYL.pdf">JST YLR-02V</a> connector while ITG/PIU sensors use <a href="https://www.molex.com/molex/products/part-detail/crimp_housings/0039012025">Molex 0039012025</a> connectors.</p>
 <h1>Force-sensing resistor (FSR)</h1>
-<figure class="image image_resized image-style-align-right" style="width:29.83%;"><img src="/hardware/a_group_of_fsrs.png">
+<p>Force-sensing resistors (also known as "force-sensitive resistor" and "FSRs") are a type of sensor that changes its resistance when force or pressure is applied to it. FSRs have recently become much more popular with ITG players because its relatively easy to implement a circuit with FSRs and their extremely slim design makes them easy to retrofit into many types of <a href="https://itg.wiki/wiki/Dance_pads">dance pads</a>.</p>
+<figure class="image image_resized" style="width:29.83%;"><img src="/hardware/a_group_of_fsrs.png">
   <figcaption>A group of FSRs</figcaption>
 </figure>
-<p>Force-sensing resistors (also known as "force-sensitive resistor" and "FSRs") are a type of sensor that changes its resistance when force or pressure is applied to it. FSRs have recently become much more popular with ITG players because its relatively easy to implement a circuit with FSRs and their extremely slim design makes them easy to retrofit into many types of <a href="https://itg.wiki/wiki/Dance_pads">dance pads</a>.</p>
 <p>&nbsp;</p>
 <h2><strong>Wiring guides</strong></h2>
-<figure class="image image_resized" style="width:14.09%;"><img src="/hardware/fsr-wiring/sujeets_wiring_diagram.png">
-  <figcaption>Sujeet's wiring diagram for a Teensy 4.0. Sensor wires go where the colored boxes are.</figcaption>
-</figure>
-<figure class="image image_resized" style="width:23.97%;"><img src="/hardware/fsr-wiring/jnero_wiring_guide.png">
-  <figcaption>JNero's wiring guide.</figcaption>
-</figure>
-<figure class="image image_resized" style="width:21.75%;"><img src="/hardware/fsr-wiring/bandits_wiring_diagram.png">
-  <figcaption>Bandit's wiring guide.</figcaption>
-</figure>
-<figure class="image image_resized" style="width:20%;"><img src="/hardware/fsr-wiring/arduino_fsr_wiring_diagram.png">
-  <figcaption>Arduino wiring diagram.</figcaption>
-</figure>
-<figure class="image image_resized" style="width:20.34%;"><img src="/hardware/fsr-wiring/fsr_padwiring_schematic.png">
-  <figcaption>Electrical wiring schematic.</figcaption>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <figure class="image image_resized" style="width:100%;"><img src="/hardware/fsr-wiring/sujeets_wiring_diagram.png">
+            <figcaption>Sujeet's wiring diagram for a Teensy 4.0. Sensor wires go where the colored boxes are.</figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure class="image image_resized" style="width:100%;"><img src="/hardware/fsr-wiring/jnero_wiring_guide.png">
+            <figcaption>JNero's wiring guide.</figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure class="image image_resized" style="width:100%;"><img src="/hardware/fsr-wiring/bandits_wiring_diagram.png">
+            <figcaption>Bandit's wiring guide.</figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure class="image image_resized" style="width:100%;"><img src="/hardware/fsr-wiring/arduino_fsr_wiring_diagram.png">
+            <figcaption>Arduino wiring diagram.</figcaption>
+          </figure>
+        </td>
+        <td>
+          <figure class="image image_resized" style="width:100%;"><img src="/hardware/fsr-wiring/fsr_padwiring_schematic.png">
+            <figcaption>Electrical wiring schematic.</figcaption>
+          </figure>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </figure>
 <p>Note for those with Teensy 4.0: some of these wiring guides say to use 5V on the Teensy. According to the Teensy 4.0 specifications, you should use 3V, not 5V. But many people do use 5V so YMMV.</p>
 <p>Notable pads that used FSRs:</p>
