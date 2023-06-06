@@ -2,7 +2,7 @@
 title: Pad Input and Adapters
 description: Overview of input devices for homemade and arcade pads
 published: 1
-date: 2023-02-12T16:50:01.572Z
+date: 2023-06-06T23:18:10.448Z
 tags: 
 editor: ckeditor
 dateCreated: 2023-02-12T15:21:32.191Z
@@ -67,13 +67,19 @@ dateCreated: 2023-02-12T15:21:32.191Z
 </figure>
 <p>The <a href="https://icedragon.io/lit/">Lit Board</a> allows for StepMania users to have the existing lights on their Dance Dance Revolution (DDR) cabinet turn on and off to the beat of the game. It is intended to be used in conjunction with existing JAMMA IO adapters.&nbsp;</p>
 <h1>Arcade Pad IOs</h1>
-<h2>GN845 DDR pad IO</h2>
+<h2>GN845-PWB(B) DDR pad IO</h2>
 <figure class="image image_resized" style="width:36.97%;"><img src="/hardware/ios/gn845_ddr_pad_io.jpg">
   <figcaption>GN845 DDR pad IO</figcaption>
 </figure>
 <figure class="image image_resized" style="width:15.23%;"><img src="/hardware/ios/gn845_schematic.jpg">
   <figcaption>GN845&nbsp;schematic</figcaption>
 </figure>
+<p>&nbsp;</p>
+<h2>BD845-PWB DDR pad IO clone.</h2>
+<p>A clone of the original DanceDanceRevolution GN845-PWB(B) Stage I/O board. &nbsp;This board was designed as a drop in replacement clone board for the Konami <a href="https://docs.bluedotarcade.com/boards/bd845-pwb/gn845-pwb">GN845-PWB(B)</a> Stage I/O board. It emulates the original DDR Stage I/O communication protocol boot sequence allowing to run the game without an IO Check Bypass.&nbsp;</p>
+<p>It also provides additional features such as debouncing and a Light-On-Press mode that lights up the arrow light when pressed without the need of an external lights driver board.</p>
+<p>Additional information can be found on the <a href=" https://docs.bluedotarcade.com/boards/bd845-pwb">BlueDot documentation</a> website.</p>
+<figure class="image"><img src="/hardware/bd845-pwb.jpg"></figure>
 <p>&nbsp;</p>
 <h2>ITG/PIU Pad IO</h2>
 <figure class="image image_resized" style="width:26.89%;"><img src="/hardware/ios/itgpiu_pad_io.jpg">
