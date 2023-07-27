@@ -2,7 +2,7 @@
 title: An Incomplete History Of Modern ITG
 description: 
 published: 1
-date: 2023-07-27T22:54:54.780Z
+date: 2023-07-27T23:48:35.548Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-27T01:22:41.869Z
@@ -20,7 +20,7 @@ What I (Chief Skittles) have wanted to do for some time is to create some sort o
 
 This document is intended to serve as a single place where I can, in great detail, develop a timeline of Modern ITG as a whole, tracing the path of history from the time of the earliest data I can find, (pre-r21 patch) to the current era, exploring as much of the game as I possibly can to explain how we ended up as we are now. I fully anticipate this to take an exceptional amount of time, despite having all of the information floating haphazardly in my brain, so I beg your patience as I develop this page.
 
-## The Early Days - Touching on Pre-r21 Times
-In order to properly discuss the current state of ITG, it's important to circle back and discuss where we came from. In this case, I'll dispense with discussing "official" ITG content, except where necessary, and instead focus on the advent and rise of custom charts. When the r21 patch first dropped and custom charts became more accessible for play on arcade ITG2 cabinets (which, it is important to note, is the only way playing pad ITG/Stepmania was possible at the time), the sentiment around them was far from the acceptance and normalcy we see today. For a long time, custom charts were seen as, at best, a fun diversion from the "real" charts - that is, officials. Even for some years after r21 was released and Roxor was sued by Konami, most players and many competitive events focused solely on officials.
+## The Early Days - The r21 Patch & The Beginning of Customs
+In order to properly discuss the current state of ITG, it's important to circle back and discuss where we came from. In this case, I'll dispense with discussing "official" ITG content, except where necessary, and instead focus on the advent and rise of custom charts. When the r21 patch first dropped (October 11, 2006) and custom charts became more accessible for play on arcade ITG2 cabinets (which, it is important to note, is the only way playing pad ITG/Stepmania was possible at the time), the sentiment around them was far from the acceptance and normalcy we see today. For a long time, custom charts were seen as, at best, a fun diversion from the "real" charts - that is, officials. Even for some years after r21 was released and Roxor was sued by Konami, most players and many competitive events focused solely on officials.
 
-For the most part, the biggest appeal of customs was playing charts beyond the difficulty limit of the base game. (To be continued).
+For the most part, the biggest appeal of customs was playing charts beyond the difficulty limit of the base game. There was certainly appeal in grinding officials for score, especially considering the substantially lower average skill level of the player base relative to modern times. However, many players simply wanted to play more challenging, physically aggressive content on pad, just to see if it was possible for them to pass. At the time, there was only one "type" of hard content available - Keyboard charts. Despite not being designed for pad play, many aspiring players found that certain charts, if not all of them, were entirely possible to play on pad, with great effort. Charts such as {xx}'s Emerald Sword, {xx}'s Holy Orders, and Toph's "murmur twins" are some examples of keyboard Stepmania charts that were popularly played by the hard/custom song scene in its infancy. Being that the chart-writing "meta" and numerous design conventions we take as standard today simply didn't exist, the quality of the charts relatively to pad play wasn't entirely relevant to the player base. They were simply new things to play that were challenging without being physically impractical.
