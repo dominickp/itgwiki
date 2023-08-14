@@ -2,7 +2,7 @@
 title: An Incomplete History Of Modern ITG
 description: 
 published: 1
-date: 2023-07-29T15:57:40.626Z
+date: 2023-08-14T18:55:46.446Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-27T01:22:41.869Z
@@ -31,4 +31,5 @@ Only with the passing of time, and the advent of writing charts *specifically* f
 
 As an aside, it cannot be overstated how much effort and dedication was required to create stepcharts at this time. All of the tools that we frequently use (and take for granted) today were not even twinkles in their respective creators' eyes at this time in history. ArrowVortex was far from even conceptualized, being initially release in 2016, Reaper DAW was fresh out of development, released in August 2006, and while Audacity, another commonly used tool for audio editing, had been publicly available since 2000, the depth of knowledge shared throughout the community now, as well as the general standards for audio cutting and pad file design, simply was not present yet. The most common "DDR Emulator" prior to 2005 wasn't even Stepmania - it was Dance With Intensity, a "DDR Clone" released in December 2000. The most regularly-used tool for making stepcharts during this era? *Notepad.* Stepcharts were created by manually typing out the "raw step data" in Notepad to be played on keyboard in DWI. Even the simple concept of viewing or playing segments of charts in Edit Mode wasn't a possibility. Testing stepcharts, whether checking the sync or playing through new additions to the file, required the chart to be played in Game Mode, from start to finish, each and every time. With all of these restrictions, it's almost shocking to believe any content at all was created at this time, much less files that were well-loved on both keyboard *and* pad play! This speaks to the level of dedication and passion these early trailblazers had for the game, as well as how innovative their contributions to the later scene were.
 
-## The Fort Rapids Era - 
+## The Fort Rapids Era - "Modern" ITG Taking Shape
+In time, following the "death" of the In The Groove series and subsequent acquisition by Konami, ITG players ultimately began to grow weary of playing the same set of official content in each tournament year over year.
