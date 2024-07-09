@@ -2,7 +2,7 @@
 title: An Incomplete History Of Modern ITG
 description: 
 published: 1
-date: 2023-08-14T18:55:46.446Z
+date: 2023-08-14T18:55:48.830Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-27T01:22:41.869Z
