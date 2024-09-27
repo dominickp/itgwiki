@@ -2,7 +2,7 @@
 title: Score
 description: 
 published: 1
-date: 2022-12-28T20:03:35.423Z
+date: 2024-09-27T04:17:59.333Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T20:03:33.263Z
@@ -112,7 +112,7 @@ dateCreated: 2022-12-28T20:03:33.263Z
 </figure>
 <h1>Score Calculation</h1>
 <p>In order to calculate a player's score, the result of each step is given a point value, based on the steps' <a href="https://itgwiki.dominick.cc/en/software/stepmania-judgements">Judgments</a>. These values are sometimes referred to as "score weights" or "dance points." These point values are added up and compared (as a percentage) to the maximum number of points possible for the chart being played.</p>
-<p>The table below shows the default point values for each step judgment in stock ITG. These are sometimes referred to as "stock weights."<br>&nbsp;</p>
+<p>The table below shows the default point values for each step judgment in stock ITG. These are sometimes referred to as "stock weights", “ITG score”, or “money score”.<br>&nbsp;</p>
 <figure class="table">
   <table style="background-color:rgb(248, 249, 250);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);">
     <tbody>
@@ -156,3 +156,50 @@ dateCreated: 2022-12-28T20:03:33.263Z
   </table>
 </figure>
 <p>Frequently, ITG tournaments and events may choose to use alternative point values for given steps, for the purpose of emphasizing a particular skillset, or adjusting how much a player is penalized for missing steps or hitting mines.</p>
+<p>The table below shows the point values for each step judgment in EX score calculation, which is the standard used in timing-focused events such as International Timing League as well as various in-person technical chart focused tournaments. These make use of the FA+ separation of blue (15ms) Fantastics and white (23ms) Fantastics for greater timing granularity.<br>&nbsp;</p>
+<figure class="table">
+  <table style="background-color:rgb(248, 249, 250);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);">
+    <tbody>
+      <tr>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Judgment</th>
+        <th style="background-color:rgb(234, 236, 240);border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;text-align:center;">Points</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Fantastic+ (blue)</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">3.5</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Fantastic (white)</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">3</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Excellent</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">2</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Great</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">1</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Decent</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">0</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Way Off</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">0</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Miss</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">0</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Completed Hold/Roll</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">1</th>
+      </tr>
+      <tr>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">Mine Hit</th>
+        <th style="border-bottom:1px solid rgb(162, 169, 177);border-left:1px solid rgb(162, 169, 177);border-right:1px solid rgb(162, 169, 177);border-top:1px solid rgb(162, 169, 177);padding:0.2em 0.4em;">-1</th>
+      </tr>
+    </tbody>
+  </table>
+</figure>
