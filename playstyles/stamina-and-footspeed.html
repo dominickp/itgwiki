@@ -2,7 +2,7 @@
 title: Stamina and Footspeed
 description: 
 published: 1
-date: 2022-12-28T20:47:07.241Z
+date: 2024-10-28T01:41:00.793Z
 tags: 
 editor: ckeditor
 dateCreated: 2022-12-28T19:51:40.819Z
@@ -15,10 +15,11 @@ dateCreated: 2022-12-28T19:51:40.819Z
 <p>Since stamina and footspeed are all about how much stream you can do (and at what speed you can do it), players often communicate a chart's content with "breakdown notation". The stepartist may write breakdown notation and include it in the metadata of the chart. Additionally, some themes (like <a href="https://itgwiki.dominick.cc/en/software/stepmania-themes#simply-love">Simply Love</a>) will generate breakdown notation and display it on top of the density graph on the song wheel.</p>
 <h3><strong>Legend</strong></h3>
 <ul>
-  <li>"<strong>-</strong>" = a short break, usually between 0 and 4 measures</li>
-  <li>"<strong>/</strong>" = a bigger break, often used for breaks longer than 4 measures</li>
-  <li>"<strong>|</strong>" = a huge break, optional but often used for breaks longer than 32 measures</li>
-  <li>"<strong>*</strong>" = broken stream, used to remove short breaks from the notation</li>
+  <li>“ ' " = an extremely short break; maximum 0.5 measures</li>
+  <li>"<strong>-</strong>" = a short break, between 0.5 and 4 measures. Breaks marked with this indicate that they are not sufficiently long enough to constitute a proper rest period between streams</li>
+  <li>"<strong>/</strong>" = a bigger break, often used for breaks longer than 4 measures. This generally means a break between streams that is neither too short to be notable or too long to be notable. A “normal” amount of break</li>
+  <li>"<strong>|</strong>" = a huge break, optional but often used for breaks longer than 32 measures. This generally means a break that is long enough for the player to recover their stamina on</li>
+  <li>"<strong>*</strong>" = broken stream, used to remove short breaks from the notation. The purpose of this symbol is to group streams together so the breakdown string does not become unreasonably long and difficult to read</li>
   <li>"<strong>(</strong>n<strong>)</strong>" = specified break, notates exactly how many measures of break (n)</li>
   <li>"<strong>n</strong>" = stream, the amount of continuous stream</li>
 </ul>
