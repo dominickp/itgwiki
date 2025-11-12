@@ -1,8 +1,8 @@
 ---
-title: ITGMania / SL Feature Cheatsheet
+title: ITGMania Feature Cheatsheet
 description: 
 published: 1
-date: 2025-11-12T22:58:01.132Z
+date: 2025-11-12T22:59:15.271Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T22:53:58.032Z
