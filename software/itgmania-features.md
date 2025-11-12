@@ -1,18 +1,16 @@
 ---
-title: ITGMania Feature Cheatsheet
+title: ITGMania / SL Feature Cheatsheet
 description: 
 published: 1
-date: 2025-11-12T22:55:35.464Z
+date: 2025-11-12T22:58:01.132Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T22:53:58.032Z
 ---
 
-# ITGMania / Simply Love Feature Cheatsheet
-
 ITGMania is the game engine officially supported by the ITG community for events such as ITL Online and Stamina RPG, and Simply Love is the officially supported theme included with it. On top of all the legacy StepMania features, there are a ton of options and shortcuts available, so it can be difficult to be aware of or find all the most useful ones. Some of the important/popular ones are outlined here.
 
-## Main Menu Options
+# Main Menu Options
 
 **Configure Keyboard/Pad Mappings**
 - In addition to the things you'd expect in any dance game software, as of ITGMania 1.0, there is a bindable restart button, which works both during gameplay and on the evaluation screen.
@@ -48,7 +46,7 @@ ITGMania is the game engine officially supported by the ITG community for events
 - Separate Unlocks By Player: Option to keep track of what you unlock separately from what others who play on your setup unlock.
 - Display GrooveStats QR Login: Option for people to be able to log into GrooveStats with a QR code instead of setting the API key in a text file for a profile. Be aware you need to keep the select profile screen enabled for this feature to work.
 
-## Songwheel
+# Songwheel
 
 Left + Right: Activates songwheel options. This includes a ton of useful stuff:
 - Sorting and searching
@@ -63,7 +61,7 @@ Ctrl + Shift + R: Hard reload - useful if the chart has changed from when it was
 
 Spin (e.g. Left, Down, Right, Up, Left): Add/remove chart to favorites
 
-## Gameplay
+# Gameplay
 
 F7: Assist tick
 F8: Autoplay
@@ -73,12 +71,12 @@ Hold esc: back to songwheel
 F6 twice: AutoSync Machine - this has the game automatically your global offset (audio) while you step as accurately to the timing of the beat as you can. It's important to press F6 TWICE if you use this feature, as pressing it only once will sync the specific chart you're playing, taking it away from its intended sync and rendering it useless for syncing to everything else. Make sure it says 'AutoSync Machine' on the screen when you're using this.
 (Alt + ) Shift + F11/F12: Manually adjust your global offset. Using alt enables smaller changes. You can manually put in changes based on your average results or feel this way, which can be easier for some people to fine tune than using the automatic sync.
 
-## Evaluation screen
+# Evaluation screen
 
 F3 (held) => F6 => 2: Refreshes the evaluation screen, which will attempt to resubmit your score if the first attempt to submit failed.
 Spin (e.g. Left, Down, Right, Up, Left): Add/remove chart to favorites
 
-## Files and Folders
+# Files and Folders
 
 If you install the game normally, your saves, songs and various folders of things you might add to will be stored separately from the installation. This is convenient for persisting all your stuff when upgrading your ITGMania version.
 
@@ -91,7 +89,7 @@ If you choose the portable install, everything will be stored together in the ga
 
 Within that main directory, you can find your profile in Save/LocalProfile/, probably associated with a long number. You can figure out if it's your profile by checking the DisplayName near the top of Editable.ini or Stats.xml. Here, you can find your scores (Stats.xml) and your in-game favorites file (favorites.txt).
 
-### Favorites and Playlists
+## Favorites and Playlists
 
 You can edit your favorites.txt to have extra subfolders in game by adding a line with the folder heading prefixed with ---. There is no functionality to edit within these in-game at the moment, adding a song to favorites just tacks it onto the end of the file, and removing a song from favorites removes it from everywhere in the file.
 
