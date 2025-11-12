@@ -1,8 +1,8 @@
 ---
 title: ITGMania Feature Cheatsheet
-description: Guide to some of the most popular and useful configurations and shortcuts in ITGMania.
+description: 
 published: 1
-date: 2025-11-12T22:53:58.032Z
+date: 2025-11-12T22:55:35.464Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T22:53:58.032Z
