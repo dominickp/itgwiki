@@ -2,7 +2,7 @@
 title: ITGMania Feature Cheatsheet
 description: 
 published: 1
-date: 2025-11-12T22:59:15.271Z
+date: 2025-11-14T01:27:44.825Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T22:53:58.032Z
@@ -60,6 +60,35 @@ Left + Right: Activates songwheel options. This includes a ton of useful stuff:
 Ctrl + Shift + R: Hard reload - useful if the chart has changed from when it was first loaded (i.e. if you edited it or downloaded an updated copy), as sometimes the old cache will interfere if you only use "load new songs".
 
 Spin (e.g. Left, Down, Right, Up, Left): Add/remove chart to favorites
+
+# Player Options
+
+## Main Modifiers
+- Type of Speed Mod: 'C' ensures a constant scroll speed throughout the chart, while 'M' provides an option to match the maximum scroll speed of the chart to the equivalent CMOD while maintaining relative scroll speed changes, which can be convenient for "NO CMOD" charts.
+- Mini: Shrink the arrows to fit more of them on the screen at once (a zoom out effect). Generally allows a faster readable scroll speed.
+- Perspective: Some people prefer the "Hallway" perspective, which has a 3D effect where the arrows get larger as they approach the receptors.
+- Background Filter: Puts a filter between the arrows and the background art to improve visibility.
+- Visual Delay: Can compensate for a difference between the visual appearance of the steps and the judgement timing due to things like monitor lag. Note this is different from global offset, which is between the audio and the step timing.
+- Music Rate: Can speed up or slow down the song.
+
+## Advanced Modifiers
+- Scroll: Some people prefer 'Reverse' to make the arrows scroll downards instead of upwards.
+- Gameplay Extras
+	- Judgement Tilt: Tilts the judgement based on whether your step was early or late for visual timing feedback.
+  - Column Cues: The column for the next step or mines after a significant period with no steps is highlighted to help you prepare.
+- Judgement Tilt Intensity: If judgement tilt is enabled above, this determines the magnitude of the tilt.
+- Error Bar: Visualization of where your step timing fell within the judgement windows. 
+- Error Bar Trim: The cutoff for the worst timing window that appears on the error bar.
+- Measure Counter: Provides a count of measures of stream during gameplay. This determines the quantization that counts as stream for this purpose.
+- Measure Lines: Creates horizontal lines on the scroll at the specified interval.
+- Early Decent/Way Off Options: ITGMania allows you to rescore a step you accidentally hit it early in the way off or decent windows and then hit it again with better timing (but you still take the life penalty). The early decent/way off judgements can be distracting when this happens, so you may prefer to enable this to hide them.
+- FA+ Options: If you want to play FA+, the main format played by the tech community which enables an extra (stricter) timing window, you can enable these options. 
+	- Display FA+ Window: Show the 15ms fantastic window during the game (blue fantastic within 15ms, white fantastics within 23ms).
+	- Display EX Score: EX score become the main score shown during gameplay and on the evaluation screen.
+	- Display FA+ Pane: Show EX/FA+ results on the evaluation screen.
+
+
+  
 
 # Gameplay
 
