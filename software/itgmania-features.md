@@ -2,7 +2,7 @@
 title: ITGMania Feature Cheatsheet
 description: 
 published: 1
-date: 2025-11-14T01:27:44.825Z
+date: 2025-11-14T01:37:10.486Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T22:53:58.032Z
@@ -74,6 +74,8 @@ Spin (e.g. Left, Down, Right, Up, Left): Add/remove chart to favorites
 ## Advanced Modifiers
 - Scroll: Some people prefer 'Reverse' to make the arrows scroll downards instead of upwards.
 - Gameplay Extras
+	- Flash Column for Miss: Can make it easier to tell which arrow you missed in in a sequence.
+	- Density Graph at Top: Shows the graph of step density at the top of the screen during gameplay, which can be useful for knowing when intense sections are coming up or how long they go for.
 	- Judgement Tilt: Tilts the judgement based on whether your step was early or late for visual timing feedback.
   - Column Cues: The column for the next step or mines after a significant period with no steps is highlighted to help you prepare.
 - Judgement Tilt Intensity: If judgement tilt is enabled above, this determines the magnitude of the tilt.
