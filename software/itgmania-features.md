@@ -2,7 +2,7 @@
 title: ITGMania Feature Cheatsheet
 description: 
 published: 1
-date: 2025-11-14T01:37:10.486Z
+date: 2026-05-09T10:41:21.088Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-12T22:53:58.032Z
@@ -48,7 +48,7 @@ ITGMania is the game engine officially supported by the ITG community for events
 
 # Songwheel
 
-Left + Right: Activates songwheel options. This includes a ton of useful stuff:
+either Left + Right or Select (Red) + Start (Green): Activates songwheel options. This includes a ton of useful stuff:
 - Sorting and searching
 - Practice mode
 - Favorites
